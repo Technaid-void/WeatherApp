@@ -205,6 +205,9 @@ class WeatherApp(QWidget):
 
     def display_error(self, message):
         self.temperature_label.setText(message)
+        self.description_label.setText('')
+        self.emoji_label.setText('')
+        self.humidity_label.setText('')
     
     def display_weather(self, data):
 
@@ -309,6 +312,6 @@ class WeatherApp(QWidget):
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     weather_app = WeatherApp()
-    weather_app.setWindowIcon(QIcon('icons_atmospheric-conditions.png'))
+    weather_app.setWindowIcon(QIcon('icons_atmospheric-conditions.ico'))
     weather_app.show()
     sys.exit(app.exec_())
